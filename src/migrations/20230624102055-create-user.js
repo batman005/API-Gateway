@@ -14,14 +14,14 @@ module.exports = {
         allowNull: false,
         unique:true,
         validate:{
-          isEmail:true,
+          isEmail:true
         }
       },
       password: {
         type: Sequelize.STRING,
         allowNull: false,
         validate:{
-          len:[3, 50],
+          len:[3, 50]
         }
       },
       createdAt: {
