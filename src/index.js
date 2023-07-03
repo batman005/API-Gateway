@@ -19,7 +19,7 @@ app.use(limiter);
 
 
 app.use('/flightsService', createProxyMiddleware({ target: ServerConfig.FLIGHT_SERVICE, changeOrigin: true, pathRewrite: {'^/flightsService' : '/'} }));
-app.use('/bookingService', createProxyMiddleware({ target: 'http://localhost:4000/', changeOrigin: true }));
+app.use('/bookingService', createProxyMiddleware({ target: ServerConfig.BOOKING_SERVICE, changeOrigin: true }));
 app.use('/api', apiRoutes);
 
 app.listen(ServerConfig.PORT, () => {
