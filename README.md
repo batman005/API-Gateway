@@ -64,6 +64,30 @@ Lets take a look inside the `src` folder
  docker run -it --init -p 3001:3001 -v "$(pwd)":/developer/nodejs/api-gateway -v api-gateway-node-modules:/developer/nodejs/api-gateway/node_modules api-gateway:latest
  ```
 
+ # runnning container naming it and connection with network bridge by docker 
+ ```
+
+  docker run -it --init --name api_gateway --network microservice-network-sky -p 3001:3001 -v "$(pwd)":/develope
+r/nodejs/api-gateway -v api-gateway-node-modules:/developer/nodejs/api-gate
+way/node_modules api-gateway:latest
+
+```
+
+# Create network bridge in docker 
+
+```
+docker network create <network name>
+
+example
+docker network create microservice-network-sky
+```
+
+# how to inspect and see configuration of network
+```
+docker network create microservice-network-sky 
+
+```
+
 
 
 
